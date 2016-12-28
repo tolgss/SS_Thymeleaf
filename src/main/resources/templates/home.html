@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Welcome</title>
+</head>
+<body>
+<h1>Welcome you are logged in</h1>
+<br/> <br/>
+<form th:action="@{logout}" method="post">
+	<input type="submit" value="logout" />
+	<input type="hidden" name="${_csrf.parameterName}" value="${_crsf.token}" />
+</form>
+</body>
+</html>
